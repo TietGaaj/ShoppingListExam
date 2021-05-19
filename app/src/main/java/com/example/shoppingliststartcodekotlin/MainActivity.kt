@@ -7,17 +7,28 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.shoppingliststartcodekotlin.adapters.ProductAdapter
 import com.example.shoppingliststartcodekotlin.data.Repository
+import com.google.firebase.FirebaseApp
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.ktx.initialize
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+
     //you need to have an Adapter for the products
-   lateinit var adapter: ProductAdapter
+
+    lateinit var adapter: ProductAdapter
+
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //FirebaseApp.initializeApp(applicationContext)
+
+
 
         Repository.getData().observe(this, Observer {
             Log.d("Products","Found ${it.size} products")
@@ -33,12 +44,12 @@ class MainActivity : AppCompatActivity() {
         xml file - in this case the id of the recyclerview should
         be "recyclerView" - as the code line below uses that */
 
-       // recyclerView.layoutManager = layoutManager
+        recyclerView.layoutManager = layoutManager
 
-       adapter = ProductAdapter(Repository.products)
+        adapter = ProductAdapter(Repository.products)
 
       /*connecting the recyclerview to the adapter  */
-      //  recyclerView.adapter = adapter
+        recyclerView.adapter = adapter
 
     }
 }

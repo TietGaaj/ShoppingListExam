@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "201609997957",
+    "project_id": "shoppinglistny-fda20",
+    "storage_bucket": "shoppinglistny-fda20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:201609997957:android:f720b9589cb7a9931fc3ec",
+        "android_client_info": {
+          "package_name": "com.example.shoppingliststartcodekotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "201609997957-5o4h1e1u6oeev7iga71pbog31luqtpnr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZKkuBb8vopqzzB3sIlRWmiGDgQeojZMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "201609997957-5o4h1e1u6oeev7iga71pbog31luqtpnr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
