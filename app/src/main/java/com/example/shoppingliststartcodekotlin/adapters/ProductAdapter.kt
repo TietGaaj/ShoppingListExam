@@ -22,7 +22,7 @@ class ProductAdapter(var products: MutableList<Product>) :
 
     override fun onBindViewHolder(holder: ProductAdapter.ViewHolder, position: Int) {
         holder.itemTitle.text= products.get(position).name
-        holder.itemDetail.text= products.get(position).name
+        holder.itemDetail.text= products.get(position).quantity.toString()
 
 
     }
@@ -34,10 +34,9 @@ class ProductAdapter(var products: MutableList<Product>) :
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
         var itemImage : ImageView
-       var itemTitle : TextView
-       var itemDetail : TextView
+        var itemTitle : TextView
+        var itemDetail : TextView
         init{
             itemImage = itemView.findViewById(R.id.item_image)
             itemTitle = itemView.findViewById(R.id.item_title)
